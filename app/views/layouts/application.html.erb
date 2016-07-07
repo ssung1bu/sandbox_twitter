@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<header>
+		<p><%= link_to('Tweets', tweets_url) %></p>
+		<p><%= link_to('New Text', new_tweet_url) %></p>
+	</header>
+	<p><%= flash[:info] %></p>
+	<%= yield %>
 </body>
 </html>

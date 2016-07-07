@@ -1,0 +1,11 @@
+<h1>All Tweets</h1>
+
+<p>There are <%= @tweets.count %> tweets.</p>
+
+<% @tweets.each do |tweet| %>
+  <p>
+  	<%= link_to(tweet.text_and_author, tweet) %>
+  	<%= edit_tweet_link(tweet) %>
+  	<%= link_to('Delete', tweet, method: :delete) %>
+  </p>
+<% end %>
