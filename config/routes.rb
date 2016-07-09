@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'tweets#index'
+
+  devise_for :users
+
   resources :tweets
 
   # The priority is based upon order of creation: first created -> highest priority.
